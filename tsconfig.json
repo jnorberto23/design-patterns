@@ -1,0 +1,17 @@
+{
+  "include": [
+    "src",
+    "main.ts",
+    "index.ts"
+  ],
+  "compilerOptions": {
+    "target": "ES2018",
+    "module": "esnext",
+    "strict": true,
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "noEmit": true,
+    "outDir": "dist"
+  },
+}
