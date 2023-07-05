@@ -1,14 +1,10 @@
-import { Table } from "../../interface/Table";
+import { Table } from "../../interfaces/products/Table";
 
 export class ModernTable implements Table {
   public size = "Medium";
   public color = "Graphite";
   public material = "Carbon Fiber";
   private style = "Modern";
-
-  constructor(private quantity: Number) {
-    this.quantity = quantity;
-  }
 
   private getSize(): string {
     return this.size;
@@ -27,17 +23,13 @@ export class ModernTable implements Table {
     return this.style;
   }
 
-  private getQuantity(): Number {
-    return this.quantity;
-  }
-
-  create(): Object {
+  create(quantity: number): Object {
     return {
-      objectCreated: `${this.getStyle} Table`,
+      name: `${this.getStyle()} Table`,
       color: this.getColor(),
       size: this.getSize(),
       material: this.getMaterial(),
-      quantity: this.getQuantity(),
+      quantity: quantity,
     };
   }
 }

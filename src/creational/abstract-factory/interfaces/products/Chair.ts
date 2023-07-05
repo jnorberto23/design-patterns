@@ -1,5 +1,5 @@
 export interface Chair {
   material: string;
   color: string;
-  create: () => Object;
+  create: (quantity: number) => Object;
 }

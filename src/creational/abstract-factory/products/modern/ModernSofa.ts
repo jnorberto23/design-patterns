@@ -1,14 +1,10 @@
-import { Sofa } from "../../interface/Sofa";
+import { Sofa } from "../../interfaces/products/Sofa";
 
-export class VintageSofa implements Sofa {
+export class ModernSofa implements Sofa {
   public seats = 4;
   public color = "Graphite";
-  public material = "Couro";
-  private style = "Silicone Fiber";
-
-  constructor(private quantity: Number) {
-    this.quantity = quantity;
-  }
+  public material = "Silicone Fiber";
+  private style = "Modern";
 
   private getSeats(): Number {
     return this.seats;
@@ -27,17 +23,14 @@ export class VintageSofa implements Sofa {
     return this.style;
   }
 
-  private getQuantity(): Number {
-    return this.quantity;
-  }
 
-  create(): Object {
+  create(quantity: number): Object {
     return {
-      objectCreated: `${this.getStyle} Sofa`,
+      name: `${this.getStyle()} Sofa`,
       color: this.getColor(),
       seats: this.getSeats(),
       material: this.getMaterial(),
-      quantity: this.getQuantity(),
+      quantity: quantity,
     };
   }
 }

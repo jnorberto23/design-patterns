@@ -1,14 +1,10 @@
-import { Table } from "../../interface/Table";
+import { Table } from "../../interfaces/products/Table";
 
 export class VintageTable implements Table {
   public size = "Large";
   public color = "Dark Brown";
   public material = "Solid Wood";
   private style = "Vintage";
-
-  constructor(private quantity: Number) {
-    this.quantity = quantity;
-  }
 
   private getSize(): string {
     return this.size;
@@ -19,7 +15,7 @@ export class VintageTable implements Table {
   }
 
   private getMaterial(): string {
-    return this.color;
+    return this.material;
   }
 
 
@@ -27,17 +23,13 @@ export class VintageTable implements Table {
     return this.style;
   }
 
-  private getQuantity(): Number {
-    return this.quantity;
-  }
-
-  create(): Object {
+  create(quantity: number): Object {
     return {
-      objectCreated: `${this.getStyle} Table`,
+      name: `${this.getStyle()} Table`,
       color: this.getColor(),
       size: this.getSize(),
       material: this.getMaterial(),
-      quantity: this.getQuantity(),
+      quantity: quantity,
     };
   }
 }

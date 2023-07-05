@@ -1,13 +1,9 @@
-import { Chair } from "../../interface/Chair";
+import { Chair } from "../../interfaces/products/Chair";
 
 export class ModernChair implements Chair {
   public material = "Chrome Steel";
   public color = "Chrome";
   private style = "Modern";
-
-  constructor(private quantity: Number) {
-    this.quantity = quantity;
-  }
 
   private getColor(): string {
     return this.color;
@@ -21,16 +17,12 @@ export class ModernChair implements Chair {
     return this.style;
   }
 
-  private getQuantity(): Number {
-    return this.quantity;
-  }
-
-  create(): Object {
+  create(quantity: number): Object {
     return {
-      objectCreated: `${this.getStyle} Chair`,
+      name: `${this.getStyle()} Chair`,
       color: this.getColor(),
       material: this.getMaterial(),
-      quantity: this.getQuantity(),
+      quantity: quantity,
     };
   }
 }
