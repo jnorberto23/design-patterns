@@ -1,17 +1,17 @@
 {
   "include": [
-    "src",
-    "main.ts",
-    "index.ts"
+    "./src/**/*.ts",
+    "./src/**/**/*.ts",
   ],
   "compilerOptions": {
-    "target": "ES2018",
-    "module": "esnext",
+    "target": "ES6",
+    "module": "commonjs",
     "strict": true,
     "esModuleInterop": true,
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
     "noEmit": true,
-    "outDir": "dist"
+    "outDir": "./dist",
+    "rootDir": "./src",
   },
 }

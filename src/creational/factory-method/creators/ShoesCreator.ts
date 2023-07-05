@@ -1,4 +1,4 @@
-import { IShoe } from "../interface/ShoeInterface";
+import { IShoe } from "../interface/IShoe";
 
 export abstract class ShoesFactory {
   abstract createProduct(): IShoe;

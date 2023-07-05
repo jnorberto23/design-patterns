@@ -1,4 +1,4 @@
-import { IShoe } from "../interface/ShoeInterface";
+import { IShoe } from "../interface/IShoe";
 import { Sneaker } from "../products/Sneaker";
 import { ShoesFactory } from "./ShoesCreator";
 

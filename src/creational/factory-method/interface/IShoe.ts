@@ -1,4 +1,4 @@
 export interface IShoe {
-  create(): void;
+  create(): string;
 //   showInfo(): string;
 }

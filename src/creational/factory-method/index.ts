@@ -2,20 +2,15 @@ import { BalletCreator } from "./creators/BalletCreator";
 import { ShoesFactory } from "./creators/ShoesCreator";
 import { SneakerCreator } from "./creators/SneakerCreator";
 
-class FactoryMethod {
+export class FactoryMethod {
   constructor() { this.execute();}
 
   execute(){
   const sneaker = new SneakerCreator();
-  const ballet = new SneakerCreator();
+  const ballet = new BalletCreator();
 
-  console.log(`sneaker: ${sneaker.create()}`);
-  console.log(`ballet: ${ballet.create()}`);
+  console.log('**Factory Method**');
+  console.log(`${sneaker.create()}`);
+  console.log(`${ballet.create()}`);
   }
 }
-
-function main(){
-    new FactoryMethod();
-}
-
-main();

@@ -1,8 +1,8 @@
-import { IShoe } from "../interface/ShoeInterface";
+import { IShoe } from "../interface/IShoe";
 
 export class Sneaker implements IShoe {
   create() {
-    return console.log("Created Sneaker");
+    return "Created Sneaker";
   }
   showInfo() {
     throw new Error("Method not implemented.");
