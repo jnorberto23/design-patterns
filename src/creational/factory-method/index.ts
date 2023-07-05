@@ -1,16 +1,29 @@
-import { BalletCreator } from "./creators/BalletCreator";
-import { ShoesFactory } from "./creators/ShoesCreator";
-import { SneakerCreator } from "./creators/SneakerCreator";
+import { BalletFactory } from "./factories/BalletFactory";
+import { SneakerFactory } from "./factories/SneakerFactory";
 
 export class FactoryMethod {
-  constructor() { this.execute();}
+  private objectsArray: object[] = [];
 
-  execute(){
-  const sneaker = new SneakerCreator();
-  const ballet = new BalletCreator();
+  constructor() {
+    this.execute();
+  }
 
-  console.log('**Factory Method**');
-  console.log(`${sneaker.create()}`);
-  console.log(`${ballet.create()}`);
+  printObjects(array: object[]) {
+    console.table(array);
+  }
+
+  createObject(object: any) {
+    this.objectsArray.push(object);
+  }
+
+  execute() {
+    const sneaker = new SneakerFactory();
+    const ballet = new BalletFactory();
+
+    console.log("**Factory Method**");
+
+    this.createObject(ballet.create(2, "Alpargatas"));
+    this.createObject(sneaker.create(4, "Nike"));
+    this.printObjects(this.objectsArray);
   }
 }

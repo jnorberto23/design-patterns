@@ -1,10 +1,11 @@
-import { IShoe } from "../interface/IShoe";
+import { ShoeInterface } from "../interface/ShoeInterface";
 
-export class Sneaker implements IShoe {
-  create() {
-    return "Created Sneaker";
-  }
-  showInfo() {
-    throw new Error("Method not implemented.");
+export class Sneaker implements ShoeInterface {
+  create(quantity: number, brand: string) {
+    return {
+      type: "Sneaker",
+      brand: brand,
+      quantity: quantity
+    };
   }
 }
