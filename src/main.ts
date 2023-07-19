@@ -3,6 +3,7 @@ import { BuilderMethod } from "./creational/builder";
 import { FactoryMethod } from "./creational/factory-method";
 import { PrototypeMethod } from "./creational/prototype";
 import { SingletonMethod } from "./creational/singleton";
+import { AdapterMethod } from "./structural/adapter/RobotExemple";
 
 function DesignPatterns(){
     new FactoryMethod();
@@ -10,6 +11,7 @@ function DesignPatterns(){
     new BuilderMethod();
     new PrototypeMethod();
     new SingletonMethod();
+    new AdapterMethod();
 }
 
 DesignPatterns();
