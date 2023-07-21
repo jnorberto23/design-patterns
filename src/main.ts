@@ -6,6 +6,7 @@ import { SingletonMethod } from "./creational/singleton";
 import { AdapterMethod } from "./structural/adapter/RobotExemple";
 import { AdapterMethod2 } from "./structural/adapter/SuperRobot";
 import { BridgeMethod } from "./structural/bridge";
+import { CompositeMethod } from "./structural/composite";
 
 function DesignPatterns(){
     new FactoryMethod();
@@ -16,6 +17,7 @@ function DesignPatterns(){
     new AdapterMethod();
     new AdapterMethod2();
     new BridgeMethod();
+    new CompositeMethod();
 }
 
 DesignPatterns();
