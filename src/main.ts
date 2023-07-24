@@ -7,6 +7,7 @@ import { AdapterMethod } from "./structural/adapter/RobotExemple";
 import { AdapterMethod2 } from "./structural/adapter/SuperRobot";
 import { BridgeMethod } from "./structural/bridge";
 import { CompositeMethod } from "./structural/composite";
+import { DecoratorMethod } from "./structural/decorator";
 
 function DesignPatterns(){
     new FactoryMethod();
@@ -18,6 +19,7 @@ function DesignPatterns(){
     new AdapterMethod2();
     new BridgeMethod();
     new CompositeMethod();
+    new DecoratorMethod();
 }
 
 DesignPatterns();
